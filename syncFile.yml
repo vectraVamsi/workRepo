@@ -16,6 +16,6 @@ jobs:
     - name: Push to second repository
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.TOKEN }}  # Token with access to the second repository
+        github_token: ${{ secrets.pushToken }} 
         branch: master
         repository: Devarapallivamsi/personalRepo
