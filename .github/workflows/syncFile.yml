@@ -1,5 +1,5 @@
 name: Sync Repository
-
+permissions: write-all
 on:
   push:
     branches:
