@@ -1,0 +1,21 @@
+name: Sync Repository
+
+on:
+  push:
+    branches:
+      - master  # or whatever branch you want to trigger this on
+
+jobs:
+  sync:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Push to second repository
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PUSHTOKEN }} 
+        branch: master
+        repository: Devarapallivamsi/personalRepo
