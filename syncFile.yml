@@ -3,11 +3,11 @@ name: Sync Repository
 on:
   push:
     branches:
-      - main  # or whatever branch you want to trigger this on
+      - master  # or whatever branch you want to trigger this on
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
@@ -17,5 +17,5 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.TOKEN }}  # Token with access to the second repository
-        branch: main  # or whatever branch you want to push changes to
-        repository: username/repository2  # Change this to the second repository's username and name
+        branch: master
+        repository: Devarapallivamsi/personalRepo
