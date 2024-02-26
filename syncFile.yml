@@ -1,0 +1,21 @@
+name: Sync Repository
+
+on:
+  push:
+    branches:
+      - main  # or whatever branch you want to trigger this on
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Push to second repository
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.TOKEN }}  # Token with access to the second repository
+        branch: main  # or whatever branch you want to push changes to
+        repository: username/repository2  # Change this to the second repository's username and name
