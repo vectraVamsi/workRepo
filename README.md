@@ -1,7 +1,2 @@
-# workRepo
-Repo in my work mail github account 
-Modification_1
-Modification_2
-
-
-
+# Personal Repo 
+My personal mail github account.
