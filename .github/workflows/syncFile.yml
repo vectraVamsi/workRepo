@@ -18,9 +18,9 @@ jobs:
         # lists all the contents of my current repo as I am checking it out.
         dir 
         # Clone personalRepo into the server using the token stored as a secret.
-        git clone https://${{ secrets.SYNCINGTOKEN }}@github.com/Devarapallivamsi/personalRepo.git
-        xcopy "D:\a\workRepo\workRepo\personalRepo\vectra.txt" "D:\a\workRepo\workRepo" /h
-        rmdir /S /Q personalRepo
+        git clone https://${{ secrets.SYNCINGTOKEN }}@github.com/Devarapallivamsi/personalRepo.git D:\a\workRepo
+        # xcopy "D:\a\workRepo\workRepo\personalRepo\vectra.txt" "D:\a\workRepo\workRepo" /h
+        # rmdir /S /Q personalRepo
         dir      
         
     # - name: Push to second repository
