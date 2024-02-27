@@ -18,6 +18,7 @@ jobs:
         # Clone personalRepo into the server using the token stored as a secret.
         dir 
         git clone https://${{ secrets.SYNCINGTOKEN }}@github.com/Devarapallivamsi/personalRepo.git
+        cd personalRepo
         dir
         # cd personalRepo
         
