@@ -19,7 +19,7 @@ jobs:
         dir 
         # Clone personalRepo into the server using the token stored as a secret.
         git clone https://${{ secrets.SYNCINGTOKEN }}@github.com/Devarapallivamsi/personalRepo.git 
-        Copy-Item -Path "D:\a\workRepo\workRepo\personalRepo\*" -Destination "D:\a\workRepo\workRepo" -Recurse
+        Copy-Item -Path "D:\a\workRepo\workRepo\personalRepo\*" -Destination "D:\a\workRepo\workRepo" -Exclude "README.md" -Recurse
         # xcopy "D:\a\workRepo\workRepo\personalRepo\vectra.txt" "D:\a\workRepo\workRepo" /h
         Remove-Item -Path "D:\a\workRepo\workRepo\personalRepo" -Recurse -Force
         dir     
