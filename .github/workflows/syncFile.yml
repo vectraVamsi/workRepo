@@ -22,10 +22,6 @@ jobs:
         xcopy "D:\a\workRepo\workRepo\personalRepo\vectra.txt" "D:\a\workRepo\workRepo" /h
         Remove-Item -Path "D:\a\workRepo\workRepo\personalRepo" -Recurse -Force
         dir      
-        
-    # - name: Push to second repository
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.SYNCINGTOKEN }} 
-    #     branch: master
-    #     repository: Devarapallivamsi/personalRepo
+        git add .
+        git commit -m "taken vectra file from personalRepo"
+  
