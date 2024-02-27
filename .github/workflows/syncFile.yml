@@ -18,9 +18,9 @@ jobs:
     - name: clone from personal
       run: |
         # Clone Repo B using the token stored as a secret.
-        git clone https://@github.com/Devarapallivamsi/personalRepo.git
+        git clone https://${{ secrets.SYNCINGTOKEN }}@github.com/Devarapallivamsi/personalRepo.git
         dir 
-        # ${{ secrets.SYNCINGTOKEN }}
+        
     # - name: Push to second repository
     #   uses: ad-m/github-push-action@master
     #   with:
