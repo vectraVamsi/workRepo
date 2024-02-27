@@ -20,8 +20,9 @@ jobs:
         # Clone personalRepo into the server using the token stored as a secret.
         git clone https://${{ secrets.SYNCINGTOKEN }}@github.com/Devarapallivamsi/personalRepo.git 
         xcopy "D:\a\workRepo\workRepo\personalRepo\vectra.txt" "D:\a\workRepo\workRepo" /h
-        rmdir 'personalRepo'
-        dir      
+        pwd
+        # rmdir 'personalRepo'
+        # dir      
         
     # - name: Push to second repository
     #   uses: ad-m/github-push-action@master
