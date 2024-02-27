@@ -8,7 +8,7 @@ on:
 jobs:
   sync:
     runs-on: windows-latest
-
+    permissions: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
