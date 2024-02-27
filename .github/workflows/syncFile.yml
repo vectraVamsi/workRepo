@@ -1,21 +1,21 @@
 name: Sync Repository
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 on: 
   workflow_dispatch: 
 
 jobs:
   sync:
     runs-on: windows-latest
-    permissions: 
-      contents: write
+    # permissions: 
+    #   contents: write
       
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: clone from personal
       run: |
-        # Clone Repo B using the token stored as a secret.
+        # Clone personalRepo into the server using the token stored as a secret.
         git clone https://${{ secrets.SYNCINGTOKEN }}@github.com/Devarapallivamsi/personalRepo.git
         dir 
         
