@@ -1,2 +1,2 @@
-# Personal Repo 
-My personal mail github account.
+# Work account repository 
+On My work mail github account.
