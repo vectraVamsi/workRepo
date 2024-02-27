@@ -19,7 +19,8 @@ jobs:
         dir 
         # Clone personalRepo into the server using the token stored as a secret.
         git clone https://${{ secrets.SYNCINGTOKEN }}@github.com/Devarapallivamsi/personalRepo.git 
-        xcopy "D:\a\workRepo\workRepo\personalRepo\vectra.txt" "D:\a\workRepo\workRepo" /h
+        Copy-Item -Path "D:\a\workRepo\workRepo\personalRepo\*" -Destination "D:\a\workRepo\workRepo" -Recurse
+        # xcopy "D:\a\workRepo\workRepo\personalRepo\vectra.txt" "D:\a\workRepo\workRepo" /h
         Remove-Item -Path "D:\a\workRepo\workRepo\personalRepo" -Recurse -Force
         dir     
         git config --global user.email "vamsi@vectraglobal.com"
