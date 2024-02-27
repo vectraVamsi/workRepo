@@ -9,6 +9,9 @@ on:
 jobs:
   sync:
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ./iHaveAdded
     # permissions: 
     #   contents: write
       
