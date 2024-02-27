@@ -1,6 +1,4 @@
 name: Sync Repository
-permissions:
-  contents: write
 
 on:
   push:
