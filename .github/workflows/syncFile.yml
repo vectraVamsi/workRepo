@@ -26,4 +26,5 @@ jobs:
         git config --global user.name "vectraVamsi"
         git add .
         git commit -m "taken vectra file from personalRepo"
+        git push origin master
   
