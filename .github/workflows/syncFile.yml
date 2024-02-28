@@ -11,10 +11,13 @@ jobs:
     runs-on: windows-latest
     
     steps:
+    
     - name: Checkout code
       uses: actions/checkout@v2
-      # with:
-        # path: 'any\random\path'
+    
+    - name: Print %GITHUB_WORKSPACE%
+      run: echo %GITHUB_WORKSPACE%
+    
     - name: clone from personal
       run: |
         # lists all the contents of my current repo as I am checking it out.
