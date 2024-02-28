@@ -12,9 +12,9 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        path: 'any\random\path'
+      uses: actions/checkout@v2
+      # with:
+        # path: 'any\random\path'
     - name: clone from personal
       run: |
         # lists all the contents of my current repo as I am checking it out.
