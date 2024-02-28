@@ -13,8 +13,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      # with:
-      #   path: 'D:a\workRepo'
+      with:
+        path: 'any\random\path'
     - name: clone from personal
       run: |
         # lists all the contents of my current repo as I am checking it out.
