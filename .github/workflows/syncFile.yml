@@ -12,9 +12,10 @@ jobs:
     
     steps:
     
-    - name: Checkout code
+    - name: Checkout code manually
       uses: actions/checkout@v2
-    
+      
+        
     - name: Print pwd
       run: pwd
     
