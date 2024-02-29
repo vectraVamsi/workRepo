@@ -24,11 +24,13 @@ jobs:
       
       - name: Configure AWS credentials
         run: |
+          unset AWS_SECRET_ACCESS_KEY
+          unset AWS_ACCESS_KEY_ID
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region ap-south-1
-      - name: listing default values
-        run : printenv | grep AWS
+      # - name: listing default values
+      #   run : printenv | grep AWS
       - name: listing buckets
         run : aws s3 ls
       # - name: Sync files to S3 bucket
