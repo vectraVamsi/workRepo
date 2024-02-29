@@ -1,4 +1,4 @@
-name: Upload Repo
+name: Upload Repo to S3
 
 on:
   workflow_dispatch:
