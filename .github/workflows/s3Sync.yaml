@@ -29,9 +29,9 @@ jobs:
           aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws configure set default.region ap-south-1
-      - name: listing buckets
-        run : aws s3 ls
-      # - name: Sync files to S3 bucket
-      #   # aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} --acl public-read --delete 
-      #   run: |
-      #      sync . s3://${{ secrets.AWS_S3_BUCKET }} 
+      # - name: listing buckets
+      #   run : aws s3 ls
+      - name: Sync files to S3 bucket
+      #  aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} --acl public-read --delete 
+        run: |
+         aws s3  sync . s3://${{ secrets.AWS_S3_BUCKET }} 
