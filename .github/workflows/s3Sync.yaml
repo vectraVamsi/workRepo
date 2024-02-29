@@ -29,6 +29,6 @@ jobs:
           aws configure set default.region ap-south-1
       
       - name: Sync files to S3 bucket
+        # aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} --acl public-read --delete 
         run: |
-          # aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} --acl public-read --delete 
           aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} --delete
